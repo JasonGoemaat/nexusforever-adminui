@@ -1,0 +1,602 @@
+{
+    "1": {
+        "Id": 1,
+        "MaxCount": 100,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "2": {
+        "Id": 2,
+        "MaxCount": 100,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 479115,
+        "LocalizedTextIdDescription": 479116,
+        "ButtonIcon": ""
+    },
+    "3": {
+        "Id": 3,
+        "MaxCount": 8,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 483856,
+        "LocalizedTextIdDescription": 483857,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_Icon_Store_Unlock_CostumeSlot"
+    },
+    "4": {
+        "Id": 4,
+        "MaxCount": 1,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 508468,
+        "LocalizedTextIdDescription": 508469,
+        "ButtonIcon": ""
+    },
+    "5": {
+        "Id": 5,
+        "MaxCount": 1,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 520989,
+        "LocalizedTextIdDescription": 520990,
+        "ButtonIcon": ""
+    },
+    "6": {
+        "Id": 6,
+        "MaxCount": 1,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 70391,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 571137,
+        "LocalizedTextIdDescription": 571138,
+        "ButtonIcon": ""
+    },
+    "7": {
+        "Id": 7,
+        "MaxCount": 1,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 291,
+        "LocalizedTextIdName": 571139,
+        "LocalizedTextIdDescription": 571140,
+        "ButtonIcon": ""
+    },
+    "8": {
+        "Id": 8,
+        "MaxCount": 1,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 571461,
+        "LocalizedTextIdDescription": 571462,
+        "ButtonIcon": ""
+    },
+    "9": {
+        "Id": 9,
+        "MaxCount": 1,
+        "Flags": 1,
+        "Spell4IdPersistentBuff": 70391,
+        "CharacterTitleId": 294,
+        "LocalizedTextIdName": 571576,
+        "LocalizedTextIdDescription": 571577,
+        "ButtonIcon": ""
+    },
+    "10": {
+        "Id": 10,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 582815,
+        "LocalizedTextIdDescription": 582816,
+        "ButtonIcon": ""
+    },
+    "12": {
+        "Id": 12,
+        "MaxCount": 12,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 731103,
+        "LocalizedTextIdDescription": 731552,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "14": {
+        "Id": 14,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "15": {
+        "Id": 15,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "16": {
+        "Id": 16,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "17": {
+        "Id": 17,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "18": {
+        "Id": 18,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "19": {
+        "Id": 19,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "20": {
+        "Id": 20,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "21": {
+        "Id": 21,
+        "MaxCount": 1,
+        "Flags": 3,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "22": {
+        "Id": 22,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 84024,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721480,
+        "LocalizedTextIdDescription": 721481,
+        "ButtonIcon": ""
+    },
+    "23": {
+        "Id": 23,
+        "MaxCount": 150,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 684238,
+        "LocalizedTextIdDescription": 721671,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "25": {
+        "Id": 25,
+        "MaxCount": 150,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 684470,
+        "LocalizedTextIdDescription": 721672,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "26": {
+        "Id": 26,
+        "MaxCount": 2000,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 689709,
+        "LocalizedTextIdDescription": 721673,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "27": {
+        "Id": 27,
+        "MaxCount": 8,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 690224,
+        "LocalizedTextIdDescription": 690753,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "31": {
+        "Id": 31,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721594,
+        "LocalizedTextIdDescription": 721670,
+        "ButtonIcon": ""
+    },
+    "32": {
+        "Id": 32,
+        "MaxCount": 10,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 699658,
+        "LocalizedTextIdDescription": 721674,
+        "ButtonIcon": ""
+    },
+    "35": {
+        "Id": 35,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 699757,
+        "LocalizedTextIdDescription": 721791,
+        "ButtonIcon": ""
+    },
+    "36": {
+        "Id": 36,
+        "MaxCount": 2000,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 700244,
+        "LocalizedTextIdDescription": 721793,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_Icon_Store_Unlock_CostumeDisplay"
+    },
+    "37": {
+        "Id": 37,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 700445,
+        "LocalizedTextIdDescription": 721794,
+        "ButtonIcon": ""
+    },
+    "38": {
+        "Id": 38,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 700702,
+        "LocalizedTextIdDescription": 700703,
+        "ButtonIcon": ""
+    },
+    "39": {
+        "Id": 39,
+        "MaxCount": 10,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 701060,
+        "LocalizedTextIdDescription": 701061,
+        "ButtonIcon": ""
+    },
+    "41": {
+        "Id": 41,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721795,
+        "LocalizedTextIdDescription": 721796,
+        "ButtonIcon": ""
+    },
+    "42": {
+        "Id": 42,
+        "MaxCount": 10,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721797,
+        "LocalizedTextIdDescription": 721798,
+        "ButtonIcon": ""
+    },
+    "43": {
+        "Id": 43,
+        "MaxCount": 10,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721799,
+        "LocalizedTextIdDescription": 721800,
+        "ButtonIcon": ""
+    },
+    "44": {
+        "Id": 44,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721802,
+        "LocalizedTextIdDescription": 721801,
+        "ButtonIcon": ""
+    },
+    "45": {
+        "Id": 45,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 721803,
+        "LocalizedTextIdDescription": 721804,
+        "ButtonIcon": ""
+    },
+    "46": {
+        "Id": 46,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 732628,
+        "LocalizedTextIdDescription": 732629,
+        "ButtonIcon": ""
+    },
+    "48": {
+        "Id": 48,
+        "MaxCount": 3,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 740068,
+        "LocalizedTextIdDescription": 740069,
+        "ButtonIcon": ""
+    },
+    "49": {
+        "Id": 49,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 740515,
+        "LocalizedTextIdDescription": 740516,
+        "ButtonIcon": ""
+    },
+    "55": {
+        "Id": 55,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 410,
+        "LocalizedTextIdName": 746729,
+        "LocalizedTextIdDescription": 746730,
+        "ButtonIcon": ""
+    },
+    "56": {
+        "Id": 56,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 411,
+        "LocalizedTextIdName": 746732,
+        "LocalizedTextIdDescription": 746733,
+        "ButtonIcon": ""
+    },
+    "57": {
+        "Id": 57,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 412,
+        "LocalizedTextIdName": 746736,
+        "LocalizedTextIdDescription": 746737,
+        "ButtonIcon": ""
+    },
+    "58": {
+        "Id": 58,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 413,
+        "LocalizedTextIdName": 746739,
+        "LocalizedTextIdDescription": 746740,
+        "ButtonIcon": ""
+    },
+    "59": {
+        "Id": 59,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 414,
+        "LocalizedTextIdName": 746742,
+        "LocalizedTextIdDescription": 746743,
+        "ButtonIcon": ""
+    },
+    "60": {
+        "Id": 60,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 416,
+        "LocalizedTextIdName": 748954,
+        "LocalizedTextIdDescription": 748955,
+        "ButtonIcon": ""
+    },
+    "61": {
+        "Id": 61,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 756660,
+        "LocalizedTextIdDescription": 756661,
+        "ButtonIcon": "charactercreate:sprCharC_Finalize_RaceChua"
+    },
+    "62": {
+        "Id": 62,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 756662,
+        "LocalizedTextIdDescription": 756663,
+        "ButtonIcon": "charactercreate:sprCharC_Finalize_RaceAurinM"
+    },
+    "63": {
+        "Id": 63,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 757230,
+        "LocalizedTextIdDescription": 757231,
+        "ButtonIcon": ""
+    },
+    "64": {
+        "Id": 64,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 422,
+        "LocalizedTextIdName": 757260,
+        "LocalizedTextIdDescription": 757261,
+        "ButtonIcon": ""
+    },
+    "65": {
+        "Id": 65,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "66": {
+        "Id": 66,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "67": {
+        "Id": 67,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "68": {
+        "Id": 68,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "69": {
+        "Id": 69,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "70": {
+        "Id": 70,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "71": {
+        "Id": 71,
+        "MaxCount": 1000,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 763236,
+        "LocalizedTextIdDescription": 763237,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "72": {
+        "Id": 72,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "73": {
+        "Id": 73,
+        "MaxCount": 1,
+        "Flags": 2,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 0,
+        "LocalizedTextIdDescription": 0,
+        "ButtonIcon": ""
+    },
+    "74": {
+        "Id": 74,
+        "MaxCount": 1,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 770001,
+        "LocalizedTextIdDescription": 770002,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    },
+    "75": {
+        "Id": 75,
+        "MaxCount": 23,
+        "Flags": 0,
+        "Spell4IdPersistentBuff": 0,
+        "CharacterTitleId": 0,
+        "LocalizedTextIdName": 770006,
+        "LocalizedTextIdDescription": 770007,
+        "ButtonIcon": "IconSprites:Icon_ItemMisc_GenericVoucher"
+    }
+}

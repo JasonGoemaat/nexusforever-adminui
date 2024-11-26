@@ -1,0 +1,104 @@
+{
+    "1": {
+        "Id": 1,
+        "LocalizedTextId": 723872,
+        "IconName": "IconSprites:Icon_ItemMisc_UI_Item_CREDD",
+        "AccountItemId": 0
+    },
+    "2": {
+        "Id": 2,
+        "LocalizedTextId": 723873,
+        "IconName": "IconSprites:Icon_ItemMisc_Icon_Store_RealmTransf_smll",
+        "AccountItemId": 0
+    },
+    "3": {
+        "Id": 3,
+        "LocalizedTextId": 723874,
+        "IconName": "IconSprites:Icon_ItemMisc_Icon_Store_Character_Rename_Small",
+        "AccountItemId": 31
+    },
+    "4": {
+        "Id": 4,
+        "LocalizedTextId": 723887,
+        "IconName": "",
+        "AccountItemId": 0
+    },
+    "5": {
+        "Id": 5,
+        "LocalizedTextId": 723888,
+        "IconName": "IconSprites:Icon_Windows16_UI_CRB_Coin_Fortune",
+        "AccountItemId": 535
+    },
+    "6": {
+        "Id": 6,
+        "LocalizedTextId": 723889,
+        "IconName": "IconSprites:Icon_Windows_UI_CRB_Coin_OmniBit",
+        "AccountItemId": 85
+    },
+    "7": {
+        "Id": 7,
+        "LocalizedTextId": 723890,
+        "IconName": "IconSprites:Icon_Windows_UI_CRB_Coin_NCoin",
+        "AccountItemId": 579
+    },
+    "8": {
+        "Id": 8,
+        "LocalizedTextId": 723891,
+        "IconName": "IconSprites:Icon_Windows16_UI_CRB_Coin_Loyalty",
+        "AccountItemId": 125
+    },
+    "9": {
+        "Id": 9,
+        "LocalizedTextId": 723892,
+        "IconName": "IconSprites:Icon_Windows_UI_CRB_Coin_ServiceToken",
+        "AccountItemId": 165
+    },
+    "11": {
+        "Id": 11,
+        "LocalizedTextId": 742607,
+        "IconName": "IconSprites:Icon_Windows_UI_CRB_Coin_ProtoBuck",
+        "AccountItemId": 769
+    },
+    "12": {
+        "Id": 12,
+        "LocalizedTextId": 743794,
+        "IconName": "IconSprites:Icon_Windows16_UI_CRB_Coin_GiantPoint",
+        "AccountItemId": 831
+    },
+    "13": {
+        "Id": 13,
+        "LocalizedTextId": 757232,
+        "IconName": "IconSprites:Icon_Windows_UI_CRB_Coin_MaxLevelToken",
+        "AccountItemId": 2155
+    },
+    "14": {
+        "Id": 14,
+        "LocalizedTextId": 759004,
+        "IconName": "IconSprites:Icon_ItemMisc_letter_0004",
+        "AccountItemId": 2389
+    },
+    "15": {
+        "Id": 15,
+        "LocalizedTextId": 765444,
+        "IconName": "IconSprites:Icon_Windows_UI_Coin_Essence_Red",
+        "AccountItemId": 2764
+    },
+    "16": {
+        "Id": 16,
+        "LocalizedTextId": 765445,
+        "IconName": "IconSprites:Icon_Windows_UI_Coin_Essence_Blue",
+        "AccountItemId": 2765
+    },
+    "17": {
+        "Id": 17,
+        "LocalizedTextId": 765446,
+        "IconName": "IconSprites:Icon_Windows_UI_Coin_Essence_Green",
+        "AccountItemId": 2766
+    },
+    "18": {
+        "Id": 18,
+        "LocalizedTextId": 765447,
+        "IconName": "IconSprites:Icon_Windows_UI_Coin_Essence_Purple",
+        "AccountItemId": 2767
+    }
+}

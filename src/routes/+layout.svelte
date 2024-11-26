@@ -1,23 +1,32 @@
 <script lang="ts">
-	import Header from './Header.svelte';
-	import '../app.css';
+import {onMount} from 'svelte'
+import Header from './Header.svelte';
+import '../app.css';
 
-	let { children } = $props();
+import * as api from '$lib/Api'
+import * as quest from '$lib/Quest'
+import * as text from '$lib/Text'
+    import { getAllTexts } from '$lib/Text';
+
+onMount(() => {
+    (window as any).s = { api, quest, text }
+});
+
+let { children } = $props();
+
 </script>
 
+{#await getAllTexts()}
+Fetching texts...
+{:then}
 <div class="app">
-	<Header />
+	<Header></Header>
 
 	<main>
 		{@render children()}
 	</main>
-
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
-	</footer>
 </div>
+{/await}
 
 <style>
 	.app {
@@ -32,26 +41,9 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 64rem;
+		/* max-width: 64rem; */
+		max-width: 96rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>

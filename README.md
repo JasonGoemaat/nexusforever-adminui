@@ -1,38 +1,36 @@
-# sv
+# AdminUI
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Admin UI for accessing a NexusForever server, if it has the api code
+installed.  Runs only on localhost and accesses the server api
+through http://localhost:5003
 
-## Creating a project
+External links:
 
-If you're seeing this, you've probably already done this step. Congrats!
+* https://www.jabbithole.com/
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Quick Start
 
-# create a new project in my-app
-npx sv create my-app
-```
+Make sure the WorldServer is running, this version created and
+working with commit XXX in my repository:
 
-## Developing
+    https://github.com/JasonGoemaat/NexusForever/tree/AddApi
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```bash
-npm run dev
+Install dependencies in this repo:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+    pnpm i
 
-## Building
+Start in dev mode and open in browser:
 
-To create a production version of your app:
+    pnpm dev --open
 
-```bash
-npm run build
-```
+Click 'Explore' in the header to get a list of GameTables that
+can be explored:
 
-You can preview the production build with `npm run preview`.
+![Explorer](doc/Explorer/Explorer.png)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Click on a table to get a list of the first 100 entries
+and an input at the top to enter an ID to lookup:
+
+![Explorer_Table](doc/Explorer/Explorer_Table.png)
+
