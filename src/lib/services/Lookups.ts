@@ -61,11 +61,220 @@ export const lookupEntitlement = (id: number) => {
     }
 }
 
+const lookupFlags = (map: string[], flags: number) => {
+    if (flags == 0) {
+        return 'None'
+    }
+    let list = []
+    let index = 0
+    while (flags > 0) {
+        if (flags & 1) {
+            if (index < map.length) {
+                list.push(map[index])
+            } else {
+                list.push(`?0x${(1<<index).toString(16)}?`)
+            }
+        }
+        flags = flags >> 1
+        index++;
+    }
+    return list.join(', ')
+}
+
+export const lookupSpellEffectTargetFlags = (flags: number) => {
+/*
+    public enum SpellEffectTargetFlags
+    {
+        None      = 0x00,
+        Caster    = 0x01,
+        Target    = 0x02,
+        Telegraph = 0x04,
+        Unknown08 = 0x08
+    }
+*/
+    const map = ['Caster', 'Target', 'Telegraph', 'Unknown08']
+    return lookupFlags(map, flags)
+}
+
+export const lookupSpellEffectFlags = (flags: number) => {
+/*
+    public enum SpellEffectFlags
+    {
+        None       = 0x00,
+        CancelOnly = 0x02,
+    }
+*/
+    const map = ['Unknown01', 'CancelOnly']
+    return lookupFlags(map, flags)
+}
+
+
+const spellEffectTypes = [
+    'NOTSET00',
+    'VitalModifier',
+	'SpellCounter',
+	'ForcedMove',
+	'CCStateSet',
+	'Transference',
+	'SummonVehicle',
+	'Activate',
+	'Damage',
+	'FactionSet',
+	'Heal',
+	'UnitPropertyModifier',
+	'DistanceDependentDamage',
+	'Script',
+	'Proc',
+	'UnitStateSet',
+	'Resurrect',
+	'Fluff',
+	'Scale',
+	'ProxyLinearAE',
+	'UnlockActionBar',
+	'SummonCreature',
+	'HousingTeleport',
+	'ActionBarSet',
+	'ForcedAction',
+	'ProxyChannel',
+	'Proxy',
+	'CCStateBreak',
+	'ForceFacing',
+	'Absorption',
+	'SapVital',
+	'Disguise',
+	'SpellImmunity',
+	'DistributedDamage',
+	'ChangePhase',
+	'NpcExecutionDelay',
+	'SummonMount',
+	'ReputationModify',
+	'GiveSchematic',
+	'UNUSED039',
+	'UNUSED040',
+	'TradeSkillProfession',
+	'QuestAdvanceObjective',
+	'GiveItemToPlayer',
+	'GiveLootTableToPlayer',
+	'NpcLootTableModify',
+	'ThreatModification',
+	'ThreatTransfer',
+	'WarplotTeleport',
+	'CraftItem',
+	'RewardPropertyModifier',
+	'SpellForceRemoveChanneled',
+	'ModifyInterruptArmor',
+	'SpellDispel',
+	'UNUSED054',
+	'ModifySpell',
+	'ModifySpellEffect',
+	'AddSpell',
+	'AddSpellEffect',
+	'SuppressSpellEffect',
+	'ModifyCreatureFlags',
+	'UNUSED061',
+	'VacuumLoot',
+	'UNUSED063',
+	'ShieldOverload',
+	'Teleport',
+	'TitleGrant',
+	'TitleRevoke',
+	'VendorPriceModifier',
+	'ApplyLASChanges',
+	'UNUSED070',
+	'FacilityModification',
+	'UNUSED072',
+	'ModifySpellCooldown',
+	'UNUSED074',
+	'ChangeIcon',
+	'ItemVisualSwap',
+	'AggroImmune',
+	'GiveAbilityPointsToPlayer',
+	'SpellEffectImmunity',
+	'SpellForceRemove',
+	'RavelSignal',
+	'ChangeDisplayName',
+	'Stealth',
+	'RemoveStealth',
+	'PathActionExplorerDig',
+	'HazardEnable',
+	'HazardModify',
+	'HazardSuspend',
+	'NpcForceFacing',
+	'ModifyAbilityCharges',
+	'UNUSED091',
+	'AchievementAdvance',
+	'PathXpModify',
+	'ProxyChannelVariableTime',
+	'FullScreenEffect',
+	'ProxyRandomExclusive',
+	'DespawnUnit',
+	'SummonPet',
+	'MimicDisplayName',
+	'MimicDisguise',
+	'GrantXP',
+	'UNUSED102',
+	'UNUSED103',
+	'UNUSED104',
+	'SettlerCampfire',
+	'SummonTrap',
+	'SetBusy',
+	'CooldownReset',
+	'RestedXpDecorBonus',
+	'LearnDyeColor',
+	'PetCastSpell',
+	'DisguiseOutfit',
+	'RewardBuffModifier',
+	'UNUSED114',
+	'UNUSED115',
+	'HousingEscape',
+	'NPCForceAIMovement',
+	'HealShields',
+	'PathMissionIncrement',
+	'GrantLevelScaledXP',
+	'DelayDeath',
+	'GrantLevelScaledPrestige',
+	'UnlockPetFlair',
+	'WarplotPlugUpgrade',
+	'UnlockMount',
+	'SetMatchingEligibility',
+	'UnlockInlaidAugment',
+	'GiveAugmentPowerToPlayer',
+	'TemporarilyUnflagPvp',
+	'SupportStuck',
+	'MiniMapIcon',
+	'Disembark',
+	'ChangePlane',
+	'ModifyRestedXP',
+	'HousingPlantSeed',
+	'UnlockVanityPet',
+	'SummonVanityPet',
+	'DamageShields',
+	'RapidTransport',
+	'DisallowPvP',
+	'GoMap',
+	'VectorSlide',
+	'ClampVital',
+	'HealingAbsorption',
+	'UnitPropertyConversion',
+	'ActivateSpellCooldown',
+	'ReturnMap',
+	'SharedHealthPool',
+	'Kill',
+    'UNUSED0x0096',
+    'PersonalDmgHealMod'
+]
+
+export const lookupSpellEffectType = (id: number) => {
+    return spellEffectTypes[id] || `UKNOWN(0x${(id || -1).toString(16)})`
+}
+
 const content = {
     getAllAccountCurrency,
     getAllEntitlements,
     lookupAccountCurrency,
     lookupEntitlement,
+    lookupSpellEffectTargetFlags,
+    spellEffectTypes,
 }
 
 registry.add('Lookups', content)

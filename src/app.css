@@ -13,6 +13,28 @@ body {
     color: rgb(28, 30, 34);
 }
 
+/***** Util *****/
+
+.underline {
+    text-decoration: underline;
+}
+
+.indented {
+    padding-left: 2rem;
+    text-indent: -2rem;
+    word-break: break-all;
+    text-wrap: wrap;
+}
+
+.empty {
+    display: none;
+}
+
+.show-empty .empty {
+    display: block;
+}
+
+/***** Formatting Common Blocks *****/
 .split {
     display: flex;
     border-radius: 2rem;
