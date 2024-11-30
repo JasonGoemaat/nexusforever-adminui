@@ -1,6 +1,19 @@
 <script lang="ts">
-    import { allTableNames } from "$lib/Text";
-    import { Badge, Breadcrumb, BreadcrumbItem } from "flowbite-svelte";
+    import { getTableNames } from "$lib/services/Table";
+    import { A, Badge, Breadcrumb, BreadcrumbItem, Input, Label, Spinner } from "flowbite-svelte";
+
+    let allTableNamesPromise = getTableNames();
+    let filterText = $state("");
+    let filteredTableNames = $derived.by(() => {
+        let ft = filterText;
+        return allTableNamesPromise.then((all: string[]) => {
+            if (ft?.length === 0) {
+                return all;
+            }
+            let text = ft.toLocaleLowerCase();
+            return all.filter((x) => x.toLocaleLowerCase().indexOf(text) >= 0);
+        });
+    });
 </script>
 
 <Breadcrumb aria-label="Default breadcrumb example" class="mb-4">
@@ -8,16 +21,21 @@
     <BreadcrumbItem>explorer</BreadcrumbItem>
 </Breadcrumb>
 
-<!-- <div class="split">
-    <div style="min-height: 500px;">Left</div>
-    <div style="min-height: 400px;">Right</div>
-</div> -->
-
-<p style="display: inline-block">
-{#each allTableNames as tableName}
-    <a href={tableName}><Badge>{tableName}</Badge></a>
-{/each}
-</p>
+{#await allTableNamesPromise}
+    <div class="text-center"><span class="mr-4 pr-4">Loading Table Names...</span><Spinner /></div>
+{:then allTableNames}
+    <div class="mb-6">
+        <Input placeholder="Filter" bind:value={filterText} />
+    </div>
+    {#await filteredTableNames then tableNames}
+        <p style="display: inline-block">
+            {#each tableNames as tableName}
+                <!-- <A href={tableName}><Badge>{tableName}</Badge></A> -->
+                <A class="px-3 py-1" href={tableName}>{tableName}</A>
+            {/each}
+        </p>
+    {/await}
+{/await}
 
 <style type="scss">
     p {

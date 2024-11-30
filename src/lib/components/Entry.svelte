@@ -7,16 +7,12 @@
 
     let showingEmpty = $state<boolean>(false)
 
-    const fields = Object.entries(entry);
+    const fields = Object.entries(entry || []);
 
-    // const headingText = entry?.LocalizedTextId ? textFor(entry?.LocalizedTextId) : `Id: ${entry.Id}`
-    // const headingText = entry?.LocalizedTextId ? textFor(entry?.LocalizedTextId) : `Id: ${entry.Id}`
     const heading1Text = `${entry.Id} - ${table}`;
     const heading2Text = entry?.LocalizedTextId ? textFor(entry?.LocalizedTextId) : (
         entry?.LocalizedTextIdName ? textFor(entry?.LocalizedTextIdName) : ""
     );
-    console.log('Name:', entry?.Name);
-    console.log('entry:', entry);
 
     const toggleShowingEmpty = (e: Event) => {
         e.preventDefault()

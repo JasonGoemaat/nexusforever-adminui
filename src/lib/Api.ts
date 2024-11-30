@@ -5,7 +5,10 @@
     'Access-Control-Allow-Origin':'*'
   }
 */
-import { browser } from '$app/environment'; 
+import { browser } from '$app/environment';
+
+const baseUri = 'http://localhost:5003/'
+// const baseUri = 'http://gamer:5003'
 
 const options = {
     mode: 'cors',
@@ -15,12 +18,12 @@ const options = {
 }
 
 export const getString = async (path: string) => {
-    const url = `http://localhost:5003/${path}`;
+    const url = `${baseUri}/${path}`;
     return await (await fetch(url)).text()
 }
 
 export const getJson = async (path: string) => {
-    const url = `http://localhost:5003/${path}`;
+    const url = `${baseUri}/${path}`;
     return await (await fetch(url)).json()
 }
 
@@ -29,7 +32,7 @@ const api = {
 };
 
 export const postJson = async <T>(path: string, data: any): Promise<T> => {
-    const url = `http://localhost:5003/${path}`;
+    const url = `${baseUri}/${path}`;
     const myOptions = {
         mode: 'cors',
         headers: {

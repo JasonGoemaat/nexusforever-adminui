@@ -2,6 +2,9 @@ import { getJson } from "$lib/Api";
 
 export const getTable = (tableName: string, limit?: number, offset?: number) => {
     if (limit) {
+        if (offset) {
+            return getJson(`tables/${tableName}?limit=${limit}&offset=${offset}`)
+        }
         return getJson(`tables/${tableName}?limit=${limit}`)
     } else {
         return getJson(`tables/${tableName}`)
@@ -15,4 +18,8 @@ export const getTableArray = (tableName: string, limit?: number, offset?: number
 
 export const getTableEntry = (tableName: string, id: number) => {
     return getJson(`tables/${tableName}/${id}`)
+}
+
+export const getTableNames = () => {
+    return getJson(`tables`).then((x: string[]) => x.sort())
 }
