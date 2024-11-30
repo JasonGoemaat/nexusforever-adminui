@@ -273,7 +273,10 @@ const content = {
     getAllEntitlements,
     lookupAccountCurrency,
     lookupEntitlement,
+
+    lookupSpellEffectFlags,
     lookupSpellEffectTargetFlags,
+    lookupSpellEffectType,
     spellEffectTypes,
 }
 

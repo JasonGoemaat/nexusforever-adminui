@@ -1,12 +1,22 @@
-import { getJson, getStatic} from '$lib/Api'
+import { getJson, getStatic } from '$lib/Api'
 import { classFor, raceFor, sexFor } from '$lib/CharacterStore'
 import { writable } from 'svelte/store'
 import { lookupAccountCurrency, lookupEntitlement } from '$lib/services/Lookups'
 
-export const getPlayers = () => {
-    return getJson('players')
-    // const hcPlayerPromise = getStatic("/players.json")
-    // return hcPlayerPromise
+export const getPlayers = async () => {
+    const players = await getJson('players')
+    return players
+}
+
+export const getPlayer = async (characterId: number) => {
+    const path = `players/${characterId}`
+    console.time(path)
+    var apiResult = await getJson(path)
+    console.timeEnd(path);
+    console.time(path + '-map')
+    var mapped = mapPlayer(apiResult)
+    console.timeEnd(path + '-map')
+    return mapped
 }
 
 export const player = writable<any>(null);
@@ -17,15 +27,15 @@ export const selectPlayer = ((newPlayer: any) => {
 
 interface mapEntitlementMap { Id: number, EntitlementId: number, Amount: number }
 export const mapEntitlement = (x: mapEntitlementMap) => {
-/*
-    "AccountEntitlement": [
-        {
-          "Id": 1,
-          "EntitlementId": 12,
-          "Amount": 1,
-          "Account": null
-        },
-*/    
+    /*
+        "AccountEntitlement": [
+            {
+              "Id": 1,
+              "EntitlementId": 12,
+              "Amount": 1,
+              "Account": null
+            },
+    */
     const et = lookupEntitlement(x.EntitlementId)
     return {
         ...et,
@@ -42,8 +52,8 @@ export const mapAccount = (a: any) => {
     }
     return {
         accountId: a.id,
-        currency: a.AccountCurrency.map((c: any) => 
-           ({ ...lookupAccountCurrency(c.CurrencyId), amount: c.Amount })),
+        currency: a.AccountCurrency.map((c: any) =>
+            ({ ...lookupAccountCurrency(c.CurrencyId), amount: c.Amount })),
         entitlements: (a.AccountEntitlement || []).map(mapEntitlement)
     }
 }
@@ -57,6 +67,7 @@ export const mapPlayer = (p: any) => {
     return {
         characterId: p.CharacterId,
         name: p.Name,
+        level: p.Level,
         sex: sexFor(p.Sex),
         race: raceFor(p.Race),
         class: classFor(p.Class),

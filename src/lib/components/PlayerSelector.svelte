@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Button, Modal } from "flowbite-svelte";
-    import { getPlayers, selectPlayer, player } from '$lib/services/Player'
+    import { getPlayers, selectPlayer, player, getPlayer } from '$lib/services/Player'
     import { classFor, raceFor, sexFor } from "$lib/CharacterStore";
 
     let playersPromise = $state<any>(null);
@@ -8,18 +8,16 @@
 
     const selectSession = (e: Event) => {
         e.preventDefault();
-        playersPromise = getPlayers();
-        // dialog!.showModal();
+        playersPromise = getPlayers().then(x => { console.log(x); return x; });
         modal = true;
     };
 
     const choosePlayer = (e: Event, p: any) => {
         e.preventDefault();
-        console.log('player is originally:', $player)
-        selectPlayer(p);
-        console.log('choosePlayer:', p)
-        // dialog?.close();
-        modal = false;
+        getPlayer(p.characterId).then(x => {
+            selectPlayer(x)
+            modal = false;
+        })
     };
 </script>
 
@@ -43,11 +41,11 @@
                         aria-roledescription="button"
                         href={"#"}
                     >
-                        <span class="name">{p.Name} ({i})</span>
+                        <span class="name">{p.name} ({p.characterId})</span>
                         <span class="sub">
-                            {sexFor(p.Sex)}
-                            {raceFor(p.Race)}
-                            {classFor(p.Class)}
+                            {sexFor(p.sex)}
+                            {raceFor(p.race)}
+                            {classFor(p.class)}
                         </span>
                     </a>
                 {/each}
