@@ -7,8 +7,8 @@
 */
 import { browser } from '$app/environment';
 
-const baseUri = 'http://localhost:5003/'
-// const baseUri = 'http://gamer:5003'
+// const baseUri = 'http://localhost:5003/'
+const baseUri = 'http://gamer:5003'
 
 const options = {
     mode: 'cors',

@@ -20,7 +20,7 @@
     }
 </script>
 
-<Card class="max-w-lg mr-4 mb-4 mt-4">
+<Card class="max-w-lg mr-4 mb-4 mt-4" style="width: auto">
     <h5 class="mb-0 mt-0 pt-0 font-bold tracking-tight text-gray-900 dark:text-white truncate">{heading1Text}</h5>
     {#if heading2Text?.length}
         <h6 class="pl-8 pb-4 mt-0 pt-0"><em>{heading2Text}</em></h6>

@@ -1,6 +1,9 @@
 [
     "Quest2",
     "QuestObjective",
+    "Salvage",
+    "SalvageException",
+    "Item2Category",
     "AccountCurrencyType",
     "AccountItem",
     "AccountItemCooldownGroup",

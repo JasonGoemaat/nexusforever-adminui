@@ -1,18 +1,24 @@
 import { getJson } from "$lib/Api";
 
-export const getTable = (tableName: string, limit?: number, offset?: number) => {
+export const getTable = (tableName: string, limit?: number, offset?: number, filters?: string[][]) => {
+    console.log('filters:', JSON.parse(JSON.stringify(filters)))
+    let criteria = []
     if (limit) {
-        if (offset) {
-            return getJson(`tables/${tableName}?limit=${limit}&offset=${offset}`)
-        }
-        return getJson(`tables/${tableName}?limit=${limit}`)
-    } else {
-        return getJson(`tables/${tableName}`)
+        criteria.push(`limit=${limit}`)
     }
+    if (offset) {
+        criteria.push(`offset=${offset}`)
+    }
+    if (filters) {
+        criteria = [...criteria, ...filters.map(f => `${f[0]}=${f[1]}`)]
+    }
+    let path = criteria.length === 0 ?
+        `tables/${tableName}` : `tables/${tableName}?${criteria.join('&')}` 
+    return getJson(path)
 }
 
-export const getTableArray = (tableName: string, limit?: number, offset?: number) => {
-    return getTable(tableName, limit, offset)
+export const getTableArray = (tableName: string, limit?: number, offset?: number, filters?: string[][]) => {
+    return getTable(tableName, limit, offset, filters)
     .then(x => Object.values(x))
 }
 

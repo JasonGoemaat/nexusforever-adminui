@@ -2,6 +2,7 @@
     import { textFor } from "$lib/Text";
     import { spellTypes } from "$lib/data";
     import { lookupSpellEffectFlags, lookupSpellEffectTargetFlags, lookupSpellEffectType } from "$lib/services/Lookups";
+    import { getTableEntry } from "$lib/services/Table";
     import { preventDefault } from "svelte/legacy";
 
     const { table, entry, field } = $props();
@@ -9,6 +10,10 @@
     let value = $state<any>(field[1]);
     let creatures = $state<string[][]>();
     let locations = $state<string[][]>();
+
+    const getObjective = (objectiveId: number) => {
+        return getTableEntry('QuestObjective', objectiveId)
+    }
 
     if (name.startsWith("LocalizedTextId")) {
         name = field[0].substring(15) || "[text]";
@@ -97,6 +102,16 @@
         {#each locations as loc}
             <div class="pl-4"><a class="underline" href="/explorer/WorldLocation2/{loc[1]}">Location {loc[1]}</a> ({loc[2]})
             <a class="underline" href="#" onclick={(e: Event) => { e.preventDefault(); alert('not implemented'); }}>teleport</a></div>
+        {/each}
+    {/if}
+
+    {#if table === 'Quest2' && name === 'Objectives'}
+        {#each value.filter((x: number) => x) as objectiveId}
+            {#await getObjective(objectiveId)}
+            <div class="pl-4">{JSON.stringify(objectiveId)}</div>
+            {:then objective}
+            <div class="pl-4">{JSON.stringify(objective)}</div>
+            {/await}
         {/each}
     {/if}
 </li>
